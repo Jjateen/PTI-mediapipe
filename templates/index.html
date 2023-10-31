@@ -5,9 +5,14 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Hand Control</h1>
-    <div class="video-container">
-        <img id="video_feed" src="{{ url_for('video') }}" alt="Video Feed">
-    </div>
+    <header>
+        <h1>LED and Motor Control using Hand Movement</h1>
+        <h2>[Project for Programming Techniques for IoT]</h2>
+    </header>
+    <section class="content">
+        <div class="video-container">
+            <img id="video_feed" src="{{ url_for('video') }}" alt="Video Feed">
+        </div>
+    </section>
 </body>
 </html>

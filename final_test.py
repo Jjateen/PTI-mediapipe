@@ -9,7 +9,7 @@ hands = mp_hands.Hands()
 mp_drawing = mp.solutions.drawing_utils
 
 # Initialize pyFirmata to communicate with the Arduino
-board = pyfirmata.Arduino('/dev/ttyACM0')  # Replace with your Arduino port
+board = pyfirmata.Arduino('COM7')  # Replace with your Arduino port
 
 # Define servo and LED pins
 servo_pin = 9  # Change this to the appropriate pin on your Arduino
