@@ -12,8 +12,8 @@ mp_drawing = mp.solutions.drawing_utils
 board = pyfirmata.Arduino('COM7')  # Replace with your Arduino port
 
 # Define servo and LED pins
-servo_pin = 9  # Change this to the appropriate pin on your Arduino
-led_pins = [13, 12, 11, 10]  # Define the pins for your LEDs
+servo_pin = 11  # Change this to the appropriate pin on your Arduino
+led_pins = [13, 12, 10, 9]  # Define the pins for your LEDs
 
 # Initialize the servo
 servo = board.get_pin(f'd:{servo_pin}:s')
@@ -94,13 +94,31 @@ while cap.isOpened():
 
                 # Display LED count on the left corner of the screen
                 cv2.putText(frame, f'LED Count: {led_count}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-
-                # Control the LEDs
-                for i, led in enumerate(leds):
-                    if i < led_count:
-                        led.write(1)
-                    else:
-                        led.write(0)
+                if led_count == 0:
+                    leds[0].write(0)
+                    leds[1].write(0)
+                    leds[2].write(0)
+                    leds[3].write(0)
+                elif led_count == 1:
+                    leds[0].write(1)
+                    leds[1].write(0)
+                    leds[2].write(0)
+                    leds[3].write(0)
+                elif led_count == 2:
+                    leds[0].write(1)
+                    leds[1].write(1)
+                    leds[2].write(0)
+                    leds[3].write(0)
+                elif led_count == 3:
+                    leds[0].write(1)
+                    leds[1].write(1)
+                    leds[2].write(1)
+                    leds[3].write(0)
+                elif led_count == 4:
+                    leds[0].write(1)
+                    leds[1].write(1)
+                    leds[2].write(1)
+                    leds[3].write(1)
 
                 # Draw landmarks on the frame
                 mp_drawing.draw_landmarks(frame, landmarks, mp_hands.HAND_CONNECTIONS)
