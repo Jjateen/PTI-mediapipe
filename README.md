@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains Python scripts for hand gesture control using MediaPipe for hand tracking and gesture recognition and Arduino for controlling servo motors and LEDs. The system can recognize gestures performed with the left hand to control a servo motor and gestures with the right hand to control LEDs.
+This repository contains Python scripts for hand gesture control using MediaPipe for hand tracking and gesture recognition and Arduino for controlling servo motors and LEDs. The system can recognize gestures performed with the left hand to control a servo motor and gestures with the right hand to control LEDs/AC Appliances.
 
 ## Features
 
@@ -34,7 +34,7 @@ This repository contains Python scripts for hand gesture control using MediaPipe
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/hand-gesture-control.git
+    git clone https://github.com/Jjateen/PTI-mediapipe.git
     ```
 
 2. Install the required Python packages:
@@ -84,7 +84,3 @@ This project is licensed under the [Apache 2.0](LICENSE).
 ## Contributing
 
 Feel free to contribute by opening issues, proposing new features, or submitting pull requests.
-
-```
-
-Make sure to replace the placeholders like `your-username` with your actual GitHub username. Also, consider including a demo GIF or screenshots to showcase the project in action.
