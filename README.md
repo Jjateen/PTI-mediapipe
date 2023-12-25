@@ -49,18 +49,18 @@ This repository contains Python scripts for hand gesture control using MediaPipe
 
 ### Gesture Control with Servo Motor
 
-Run the following script to control a servo motor based on the hand gesture:
+Run the following script to test you environment setup:
 
 ```bash
-python hand_control_servo.py
+python err_test.py
 ```
 
-### Gesture Control with LEDs
+### Gesture Control with LEDs, Relay and Servo motor
 
-Run the following script to control LEDs based on hand gestures:
+Run the following script to control LEDs/Relay and Servo motor based on hand gestures:
 
 ```bash
-python hand_control_leds.py
+python final_test.py
 ```
 
 ## Documentation
